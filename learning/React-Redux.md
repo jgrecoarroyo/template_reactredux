@@ -1,6 +1,6 @@
 # Table of Contents:
 
-- [React-Redux](#react+redux)
+- [React+Redux](#react+redux)
   - [Actions](#actions)
   - [Store](#store)
   - [Reducers](#reducers)
