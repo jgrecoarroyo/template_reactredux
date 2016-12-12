@@ -1,0 +1,10 @@
+# Dependency directories
+node_modules
+
+# Project compiles dirs
+www
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
