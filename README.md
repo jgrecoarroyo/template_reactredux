@@ -7,6 +7,8 @@ Note this project is work in progress and missing:
 - testing
 - CSS Framework (left out intentionally, but further studies should be done in this area)
 
+For more information about learning react + redux, please refer to the document [React-Redux.md](./learning/React-Redux.md)
+
 
 
 ### Getting started
