@@ -1,3 +1,16 @@
+# Table of Contents:
+
+- [React-Redux](#react-redux)
+  - [Actions](#actions)
+  - [Store](#store)
+  - [Reducers](#reducers)
+  - [Components](#components)
+  - [React-Redux](#react-redux)
+  - [React-router](#react-router)
+
+
+
+
 # React-Redux
 
 ### Redux: 3 principles
@@ -8,7 +21,9 @@
 
 
 
-### Redux: new concepts from flux
+
+
+### Redux: new concepts from Flux
 
 1. **Reducers**: functions that take the current state in an action and return a new state. Pure Functions!!
 2. **Containers**: container component (holding logic, vs presentation components).
@@ -16,18 +31,8 @@
 
 
 
+
 ### Redux Flow
-
-- Actions
-- Store
-- Reducers
-- React-Redux:
-  - Provider
-  - Connector[Redux] (to Container Component [React])
-
- ![reactredux](reactredux.png)
-
-### A chat with redux
 
 **React** - Hey CourseAction, someone clicked this "Save Course" button..
 
@@ -40,6 +45,8 @@
 **React-Redux** - Woah, thanks for the new data Mr. Store. I'll now intelligently determine if I should tell React about this change so that it only has to bother with updating the UI when necessary.
 
 **React** - Ooo! Shiny new data has been passed down via props from the store! I'll update the UI to reflect this!
+
+ ![reactredux](reactredux.png)
 
 
 
@@ -58,8 +65,6 @@ function rateCourse(rating){
   return { type: RATE_COURSE, rating: rating }
 }
 ```
-
-
 
 
 
@@ -175,9 +180,13 @@ Libraries
 
 
 
+
+
+
+
 ## Reducers
 
-#### **Definition**
+#### Definition
 
 It's a function that takes `state` and `action` object and returns a `new state`.
 
@@ -226,8 +235,6 @@ NOTE: **ALL** Reducers are called on each dispatch! So it is important to return
 
 
 ## Components
-
-
 
 ### Types
 
@@ -312,7 +319,7 @@ Props
 - stateless, doesn't support state
 - functional components (no class keyword needed)
 - no need to use bind (for this)
-- higher performance 
+- higher performance
 
 
 
@@ -324,6 +331,7 @@ Other ways to create components:
 - Mixins
 - Parasitic Components
 - StampIt
+
 
 
 
@@ -342,7 +350,7 @@ It connects your React components to your redux library. It is composed of two c
 // give access to the store to all the App
 <Provider store={this.props.store}>
 	<App/>
-</Provide>
+</Provider>
 ```
 
 
@@ -363,7 +371,7 @@ It is function to defined what part of Redux store to expose to the component. A
 ```javascript
 function mapStateToProps(state){
   return {
-    appState: state // we pass all the state 
+    appState: state // we pass all the state
   };
 }
 
@@ -419,6 +427,7 @@ function mapDispatchToProps(dispatch){
 
 
 
+
 ## React-router
 
 ```jsx
@@ -438,7 +447,7 @@ export default(
 );
 ```
 
-The component defined in `Route` will always be loaded (in this case `App`). 
+The component defined in `Route` will always be loaded (in this case `App`).
 
 The components `IndexRoute` and `Route` found as childs, will be passed to it's parent `App` as children via `props`.
 
@@ -453,14 +462,14 @@ class App extends React.Component {
     return (
       <div className="container-fluid">
         <p>Header here...</p>
-        {this.props.children} // <-- see note below 
+        {this.props.children} // <-- see note below
         /* IndexRoute and Route ie 'HomePage', and 'AboutPage'
            are added here according to clicking/routing behaviour **/
       </div>
     );
   }
 }
-                                   
+
 App.protoTypes = {
   children: PropTypes.object.isRequired
 };
@@ -481,4 +490,3 @@ render(
   document.getElementById('app')
 );
 ```
-
