@@ -1,6 +1,15 @@
-# react + babel + webpack + browser-synch
+# template react + redux
 
-### getting started
+Template for bootstraping (and learning) a web app based on: react + redux + babel + webpack + browser-synch.
+
+Note this project is work in progress and missing:
+
+- testing
+- CSS Framework (left out intentionally, but further studies should be done in this area)
+
+
+
+### Getting started
 
 In order to start the project we will be using npm scripts:
 
@@ -50,7 +59,7 @@ I'd preffer to not have to install webpack globally and have all the necessary d
 
 ------
 
-### project structure
+### Project structure
 
 - **src**: source code of the project itself
 - **www**: destination folder (static front-end)
@@ -79,9 +88,9 @@ I'd preffer to not have to install webpack globally and have all the necessary d
 
 ------
 
-### dependencies
+### Dependencies
 
-#### overall view
+#### Overall view
 
 The best way to have an overall view is to check the [package.json](./package.json) file, here below commented:
 
@@ -120,7 +129,7 @@ used for:
 3. Create index.html from an EJS template
 4. Run a developer server using browser-synch
 
-##### How?
+#### How?
 
 Specify an entry point, and then webpack will calculate all the dependencies that this file requires (including css files: see loaders). Then specify an output point, where all the files will be bundled together to. See [webpack.config.js](/Users/juangreco/Documents/Projects/sites/cmed/webpack.config.js) here divided into parts:
 
